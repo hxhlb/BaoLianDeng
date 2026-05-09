@@ -54,14 +54,10 @@ body {
 
 /* Hero */
 .hero {
-  /* Subtle radial glow on top of the gradient draws the eye toward the
-     video frame that overlaps the hero's bottom edge. */
-  background:
-    radial-gradient(ellipse 1100px 520px at 50% 110%, rgba(255, 255, 255, 0.18), transparent 60%),
-    linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
   color: #fff;
   text-align: center;
-  padding: 64px 24px 100px;
+  padding: 64px 24px 64px;
 }
 
 .hero-inner {
@@ -165,16 +161,14 @@ body {
   fill: currentColor;
 }
 
-/* Promo video — overlaps the hero's bottom edge so the moving image
-   feels like a window cut into the brand band, not a pasted-in block.
+/* Promo video — sits in its own band below the hero, matching the
+   .section content column width so it lines up with the cards below.
    Autoplays muted + looped on any device that allows it; users can
    scrub or pause via the native controls. */
 .promo {
-  max-width: 1140px;
-  margin: -72px auto 0;
-  padding: 0 24px 56px;
-  position: relative;
-  z-index: 1;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 56px 24px;
 }
 .promo-frame {
   position: relative;
@@ -203,7 +197,7 @@ body {
   text-transform: uppercase;
 }
 @media (max-width: 720px) {
-  .promo { margin-top: -56px; padding-bottom: 36px; }
+  .promo { padding: 40px 20px; }
   .promo-frame { border-radius: 12px; }
 }
 
@@ -464,7 +458,7 @@ footer .footer-links {
 /* Responsive */
 @media (max-width: 640px) {
   .hero {
-    padding: 48px 20px 80px;
+    padding: 48px 20px;
   }
 
   .hero-icon {
